@@ -1,5 +1,43 @@
-#class comb
-#class include
+def get_result(guess, ans):
+	a=0
+	b=0
+	for i in range(len(guess)):
+		if guess[i]==ans[i]:
+			a += 1
+		elif guess[i] in ans:
+			b += 1
+	return (a, b)
+
+#class comb +addtolist, filter , general valid (method)
+
+class combination :
+	combination_lists = []
+	def __init__(self, comb_str) :
+		self.combination = comb_str
+	def valid(self, result, a, b):
+		get_result_a, get_result_b = get_result(result,self.combination)
+		if get_result_a>a+(self.combination).count("*") or get_result_a<a :
+			return False
+		elif get_result_b>b+(self.combination).count("*") or get_result_b<b:
+			return False
+		return True
+
+#class include +addtolist, general valid (method)
+class includes_digit:
+	includes_digit_list = []
+	def __init__(self, total, nums_include) :
+		self.nums_include = nums_include
+		self.total = total
+	def valid_guess(self, guess):
+		included_digit = 0
+		for i in guess:
+			if i in self.nums_include:
+				included_digit += 1
+		if included_digit==self.total:
+			return True
+		return False
+
+	
 #def next not repeat combination
 def is_repeat(num:str):
 	for i in range(len(num)-1):
