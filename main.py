@@ -2,7 +2,9 @@
 #class include
 #def next not repeat combination
 #print title
-
+print("+-------------------------+"+
+      "\n| GUESSING 1A2B ALGORITHM |"+
+	  "\n+-------------------------+")
 #settings input number of digits
 
 
