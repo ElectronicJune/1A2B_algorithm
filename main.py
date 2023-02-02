@@ -6,8 +6,9 @@ print("+-------------------------+"+
       "\n| GUESSING 1A2B ALGORITHM |"+
 	  "\n+-------------------------+")
 #settings input number of digits
+digits = int(input("\nENTER NUMBER OF DIGITS : "))
 
-
+#create guessing num
 #do while loop
 while True :
     #guess num
