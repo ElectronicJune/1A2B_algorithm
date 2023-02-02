@@ -1,6 +1,20 @@
 #class comb
 #class include
 #def next not repeat combination
+def is_repeat(num:str):
+	for i in range(len(num)-1):
+		if num.count(num[i],i+1)>0:
+			return True
+	return False
+def add_zero(digits, string):
+	return "0"*(digits-len(string))+string
+def next_combination(current_num):
+	next_num = add_zero(len(current_num), str(int(current_num)+1))
+	while is_repeat(next_num) :
+		next_int = str(int(next_num)+1) #without zero starting
+		next_num = add_zero(len(current_num), next_int)
+	return next_num
+
 #print title
 print("+-------------------------+"+
       "\n| GUESSING 1A2B ALGORITHM |"+
