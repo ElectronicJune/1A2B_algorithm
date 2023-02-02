@@ -9,6 +9,7 @@ print("+-------------------------+"+
 digits = int(input("\nENTER NUMBER OF DIGITS : "))
 
 #create guessing num
+guessing_num = "0"*digits
 #do while loop
 while True :
     #guess num
