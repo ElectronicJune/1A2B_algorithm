@@ -21,6 +21,10 @@ class combination :
 		elif get_result_b>b+(self.combination).count("*") or get_result_b<b:
 			return False
 		return True
+	@staticmethod
+	def add_combinations(guess, a):
+		pass
+
 
 #class include +addtolist, general valid (method)
 class includes_digit:
@@ -59,20 +63,30 @@ print("+-------------------------+"+
 	  "\n+-------------------------+")
 #settings input number of digits
 digits = int(input("\nENTER NUMBER OF DIGITS : "))
-
+print()
 #create guessing num
 guessing_num = "0"*digits
+round_ = 1
 #do while loop
 while True :
     #guess num
-	#if guess num not possible continue
+	guessing_num = next_combination(guessing_num)
+	#!!! if guess num not possible continue
 
     #print guess num
+	print("{round_}) {guessing_num} :")
     #get A
+	a = int(input("A's : "))
     #get B
+	b = int(input("B's : "))
     #if A = full break
+	if a == digits:
+		break
+
     #if nA0B (generate comb)
     
     #include N numbers only (delete comb and add )
 	pass
 
+print("I won")
+input()
